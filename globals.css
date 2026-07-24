@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #F7F3EE;
+  --foreground: #3C2F2F;
+  --card: #FFFFFF;
+  --card-foreground: #3C2F2F;
+  --popover: #FFFFFF;
+  --popover-foreground: #3C2F2F;
+  --primary: #B8A3FF;
+  --primary-foreground: #3C2F2F;
+  --secondary: #FFC7A8;
+  --secondary-foreground: #3C2F2F;
+  --muted: #EDE8DC;
+  --muted-foreground: #7F6E6A;
+  --accent: #BFE7D2;
+  --accent-foreground: #3C2F2F;
+  --destructive: #FF6B6B;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(60,47,47,0.12);
+  --input: rgba(60,47,47,0.12);
+  --ring: #B8A3FF;
+  --radius: 1.25rem;
+}
+
+@theme inline {
+  --font-sans: 'Nunito', sans-serif;
+  --font-display: 'Nunito', sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --radius-2xl: 2.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito', sans-serif;
+  }
+}
+
+/* Clay card effect */
+.clay-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  box-shadow:
+    0 8px 32px rgba(184, 163, 255, 0.18),
+    0 2px 8px rgba(60, 47, 47, 0.08),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+  border: 1.5px solid rgba(255,255,255,0.7);
+}
+
+.clay-card-colored {
+  border-radius: 24px;
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.10),
+    0 2px 8px rgba(0,0,0,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+  border: 1.5px solid rgba(255,255,255,0.5);
+}
+
+.clay-btn {
+  border-radius: 999px;
+  box-shadow:
+    0 6px 20px rgba(184, 163, 255, 0.4),
+    0 2px 6px rgba(0,0,0,0.1),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+  transition: all 0.2s ease;
+}
+
+.clay-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 28px rgba(184, 163, 255, 0.5),
+    0 4px 10px rgba(0,0,0,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+}
+
+.clay-btn:active {
+  transform: translateY(1px);
+  box-shadow:
+    0 3px 10px rgba(184, 163, 255, 0.3),
+    inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+nextjs-portal {
+  display: none !important;
+}
