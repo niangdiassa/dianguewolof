@@ -23,7 +23,7 @@ export default function LessonsPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {lessons.map((lesson) => (
-            <Link key={lesson.id} href={`/leçons/${lesson.id}`}>
+            <Link key={lesson.id} href={`/lecons/${lesson.id}`}>
               <div
                 className="clay-card-colored p-7 cursor-pointer hover:scale-[1.02] transition-all duration-200 h-full"
                 style={{ background: lesson.bgColor }}

@@ -57,7 +57,7 @@ export default function LessonPage({ params }: { params: Promise<{ id: string }>
 
       {/* Header */}
       <header className="clay-card mx-4 mt-4 px-6 py-4 flex items-center gap-3 sticky top-4 z-50 bg-white/90 backdrop-blur-sm">
-        <Link href="/leçons" className="text-2xl hover:scale-110 transition-transform flex-shrink-0">←</Link>
+        <Link href="/lecons" className="text-2xl hover:scale-110 transition-transform flex-shrink-0">←</Link>
         <div className="flex items-center gap-3 flex-1 min-w-0">
           <span className="text-2xl flex-shrink-0">{lesson.emoji}</span>
           <div className="min-w-0">

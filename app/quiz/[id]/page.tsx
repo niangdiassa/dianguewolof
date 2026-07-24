@@ -174,7 +174,7 @@ export default function QuizGamePage({ params }: { params: Promise<{ id: string 
                 Commencer le quiz 🚀
               </button>
             </div>
-            <Link href={`/leçons/${lesson.id}`}
+            <Link href={`/lecons/${lesson.id}`}
               className="text-sm font-bold text-[#B8A3FF] hover:underline">
               Réviser la leçon d'abord 📖
             </Link>
@@ -355,7 +355,7 @@ export default function QuizGamePage({ params }: { params: Promise<{ id: string 
               >
                 Recommencer 🔄
               </button>
-              <Link href={`/leçons/${lesson.id}`}
+              <Link href={`/lecons/${lesson.id}`}
                 className="clay-btn px-8 py-4 text-lg font-bold text-[#3C2F2F] bg-white block">
                 Réviser la leçon 📖
               </Link>

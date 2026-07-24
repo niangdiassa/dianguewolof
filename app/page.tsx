@@ -55,7 +55,7 @@ export default function Home() {
             Apprends avec des flashcards, des leçons et des quiz interactifs.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/leçons" className="clay-btn px-8 py-4 text-lg font-bold text-white inline-block"
+            <Link href="/lecons" className="clay-btn px-8 py-4 text-lg font-bold text-white inline-block"
               style={{ background: "linear-gradient(135deg, #B8A3FF, #9F87EE)" }}>
               Commencer à apprendre 🚀
             </Link>
@@ -93,7 +93,7 @@ export default function Home() {
         <section>
           <div className="flex items-center justify-between mb-6">
             <h3 className="text-2xl font-black text-[#3C2F2F]">Choisir une leçon</h3>
-            <Link href="/leçons" className="text-sm font-bold text-[#B8A3FF] hover:underline">
+            <Link href="/lecons" className="text-sm font-bold text-[#B8A3FF] hover:underline">
               Voir tout →
             </Link>
           </div>
@@ -102,7 +102,7 @@ export default function Home() {
               const stats = lessonStats[lesson.id];
               const done = stats && stats.quizzesDone > 0;
               return (
-                <Link key={lesson.id} href={`/leçons/${lesson.id}`}>
+                <Link key={lesson.id} href={`/lecons/${lesson.id}`}>
                   <div
                     className="clay-card-colored p-6 cursor-pointer hover:scale-[1.02] transition-all duration-200 h-full relative"
                     style={{ background: lesson.bgColor }}
