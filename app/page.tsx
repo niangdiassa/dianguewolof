@@ -4,7 +4,7 @@ import Link from "next/link";
 import { lessons } from "@/lib/wolof-data";
 import { useProgressStore, getLevelForXP } from "@/lib/progress-store";
 import { ProgressCard, XPToast } from "@/components/ProgressUI";
-import { WordOfTheDay } from "@/components/WordOfTheDay";import
+import { WordOfTheDay } from "@/components/WordOfTheDay";
 
 export default function Home() {
   const totalXP = useProgressStore((s) => s.totalXP);
@@ -13,9 +13,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen" style={{ background: "#F7F3EE" }}>
-import<XPToast /import>
-<WordOfTheDay />
-import
+      <XPToast />
+      <WordOfTheDay />
       {/* Header */}
       <header className="clay-card mx-4 mt-4 px-6 py-4 flex items-center justify-between sticky top-4 z-50 bg-white/90 backdrop-blur-sm">
         <div className="flex items-center gap-3">
